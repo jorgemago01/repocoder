@@ -1,0 +1,9 @@
+.containerHeader {
+  display: flex;
+}
+.containerHeader .imageHeader {
+  justify-content: flex-start;
+}
+.containerHeader .textHeader {
+  align-items: end;
+}/*# sourceMappingURL=mainHome.css.map */

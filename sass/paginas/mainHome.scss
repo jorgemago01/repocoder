@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+
+.containerHeader {
+  display: flex;
+  .imageHeader {
+    justify-content: flex-start;
+  }
+  .textHeader {
+    align-items: end;
+  }
+}
