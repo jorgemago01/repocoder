@@ -21,17 +21,24 @@ body {
   background-size: cover;
   background-position: auto;
 }
-.responsive{color: azure;}
+.responsive{color: azure;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+
+
 body .fondo-header {
   background-image: url(https://lh3.googleusercontent.com/2rBX0mJVfjDcp0fYTiGWKgD4-lq4KvePYDmXz_2aNiioJ2QMxhrzZhCcjTXRkTaIm4XTK_MMAUy-qo4XWhKlaj60wWcnjAeeVKcQtHx8);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 body .responsive {
   color: azure;
 }
-
 .title {
   color: var(white);
   font-size: 3rem;
@@ -376,7 +383,7 @@ a {
   width: 60%;
 }
 .imgCarrera {
-  width: 100%;
+  width: 50% !important;
 }
 .video-responsive {
   position: relative;
@@ -701,7 +708,6 @@ h3 {
     height: auto;
     width: 50%;
     margin: auto;
-    background: repeating-radial-gradient(blue, transparent 100px);
     margin-top: 30px;
   }
 
@@ -767,9 +773,13 @@ h3 {
   }
 
   .grid-contenedor3 {
+    display: block;
     border-radius: 0%;
-    background: repeating-radial-gradient(#178d85, black 196px);
-    display: flex;
+    background: repeating-radial-gradient(#178d85, black 196px);}
+    .cristales{
+      display: grid;
+      grid-template-columns:1fr
+     }
   }
 
   .grid-contenedor4 {
@@ -793,9 +803,63 @@ h3 {
     border: solid azure;
     margin-bottom: 10%;
   }
-}
+
 @media (max-width: 425px) {
+  .content-all{margin-bottom: 179%;}
+  
   .cardImg {
     margin: 3% 0 4% 30%;
   }
+  .video4{display: none;}
+  .reproductor {
+    display: none;
+  }
+  .responsive{
+    display: block;
+   }
+   .container {
+    display: block;
+    cursor: pointer;
+  }
+  .selectCont{
+   display: none;
+   }
+   
+    .cristales{
+      display: grid;
+      grid-template-columns: 1fr;
+     }
+  .seccion4b{
+    margin: inherit;
+  }
+    
+  .burger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #toggle:checked ~ .menu {
+    display: block;
+  }
+  
+  #toggle:checked ~ .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #toggle:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #toggle:checked ~ .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+  
+ 
+  
+ 
+  
 }
