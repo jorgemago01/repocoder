@@ -1,141 +1,100 @@
+@import "./variables.scss";
+@import "./paginas/mainBibliografia.scss";
+@import "./paginas/mainHome.scss";
+@import "./paginas/mainEquipo.scss";
+@import "./paginas/mainIngreso.scss";
+@import "./paginas/mainCarreras.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/16:9/pass/2101913.jpg);
   background-size: cover;
-  background-position: auto;
+  background-position: auto;}
+
+  .containerHeader {
+    display: flex;
+    align-items: center;
+  }
+  
+ 
+  
+  @media screen and (min-width: 768px) {
+    .containerHeader {
+      justify-content: space-between;
+    }
+    .menu {
+      position: static;
+      width: auto;
+      transform: translateX(0);
+      background-color: transparent;
+      padding: 0;
+      transition: none;
+    }
+  
+    .menu ul {
+      display: flex;
+    }
+  
+    .menu li {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+  
+
+  .fondo-header {
+    background-image: url(https://lh3.googleusercontent.com/2rBX0mJVfjDcp0fYTiGWKgD4-lq4KvePYDmXz_2aNiioJ2QMxhrzZhCcjTXRkTaIm4XTK_MMAUy-qo4XWhKlaj60wWcnjAeeVKcQtHx8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+  .responsive{color:azure;
+    display: grid;
+    grid-template-columns:1fr ;
+    
+  }
 }
-
-
-.portada {
-  border-radius: 20px;
-  padding: 10px;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  width: 240px;
-}
-
-
-body .fondo-header {
-  background-image: url(https://lh3.googleusercontent.com/2rBX0mJVfjDcp0fYTiGWKgD4-lq4KvePYDmXz_2aNiioJ2QMxhrzZhCcjTXRkTaIm4XTK_MMAUy-qo4XWhKlaj60wWcnjAeeVKcQtHx8);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-
-.responsive {
-  color: azure;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.title {
-  color: var(white);
+.title{
+  color: var($primary-text);
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1rem;
 }
-
-
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: arial;
-  margin-top: 80px;
-  color: var(white);
-  text-shadow: 0px 0px 6px black;
-}
-
-.reproductor {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  height: 183px;
-  justify-content: center;
-  border-radius: 12px
-}
-
-.redes {
-  display: grid;
-
-  grid-template-columns: 4fr 4fr 4fr 4fr;
-  gap: 29px;
-  width: 218px;
-  border-radius: 7px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  align-items: center;
-  margin: auto;
-  margin-top: 10%;
-}
-
-.iconImg {
-  width: 150%;
-}
-
-.pie {
-  margin-top: 10%;
-  color: azure;
-  background-color: #3d4850;
-  height: 10%;
-}
-
-a {
-  color: azure;
-  border-radius: 10%;
-}
-
-/* fin de css para contenido gral */
-
-
-/*  */
-.containerHeader {
-  display: flex;
-}
-
-.containerHeader .imageHeader {
-  justify-content: flex-start;
-}
-
-.containerHeader .textHeader {
-  align-items: end;
-}
-
-/*  */
-
-
-.contBiblio {
+.contBiblio{
   margin-top: 46pc;
   margin-left: 6%;
   margin-right: 6%;
 }
-
 .seccion1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
 
-.seccion1 .imagenes {
-  margin-left: auto;
-}
+  .imagenes {
+    margin-left: auto;
+  }
 
-.seccion1 .seccion1-hijo {
-  margin-right: auto;
+  .seccion1-hijo {
+    margin-right: auto;
+  }
 }
 
 .carrusel {
   margin-bottom: 30%;
 }
 
-
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: arial;
+  margin-top: 80px;
+  color: var($primary-text);
+  text-shadow: 0px 0px 6px black;
+}
 
 .content-all {
   width: 210px;
@@ -143,18 +102,16 @@ a {
   perspective: 800px;
   position: relative;
   margin-top: 50px;
-}
+
 
 .content-carrousel {
   width: 100%;
   position: absolute;
-  -webkit-animation: rotar 18s infinite linear;
   animation: rotar 18s infinite linear;
   transform-style: preserve-3d;
 }
 
 .content-carrousel:hover {
-  -webkit-animation-play-state: paused;
   animation-play-state: paused;
   cursor: pointer;
 }
@@ -227,30 +184,29 @@ a {
   display: flex;
   justify-content: space-between;
 }
-
-.imageHeader {
-  justify-content: flex-start;
+  .imageHeader {
+    justify-content: flex-start;
+  }
+  .textHeader {
+    justify-content: flex-end;
+    margin: 2% 3% 0;
+  }
 }
 
-.textHeader {
-  justify-content: flex-end;
-  margin: 2% 3% 0;
-}
 
-.titleBio {
+.titleBio{
   margin-top: 1rem;
   color: azure;
   font-size: 3rem;
 }
-
-.textBio {
+.textBio{
   text-align: center;
   color: azure;
   font-size: 1.2rem;
 }
-
 .redesBiblio {
   display: grid;
+
   grid-template-columns: 4fr 4fr 4fr 4fr;
   gap: 29px;
   width: 218px;
@@ -261,19 +217,8 @@ a {
   margin: auto;
   margin-top: 50%;
 }
-
-.iconImg {
-  width: 150%;
-}
-
-@-webkit-keyframes rotar {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
+.iconImg{
+    width: 150%;
 }
 
 @keyframes rotar {
@@ -284,17 +229,13 @@ a {
   to {
     transform: rotateY(360deg);
   }
-
-
 }
 
-/*# sourceMappingURL=main.css.map */
 body {
   background-image: url(https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/16:9/pass/2101913.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: auto;
-}
 
 .fondo-header {
   background-image: url(https://static.wikia.nocookie.net/esstarwars/images/b/b5/Site-background-light/revision/latest?cb=20230429033528);
@@ -302,18 +243,22 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-/* inicio pagina index */
-
+}
+.reproductor {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 183px;
+  justify-content: center;
+  border-radius:12px
+}
 .containerHeader {
   display: flex;
   justify-content: space-between;
 }
-
 .imageHeader {
   justify-content: flex-start;
 }
-
 .textHeader {
   justify-content: flex-end;
   margin: 2% 3% 0;
@@ -333,13 +278,53 @@ body {
   }
 }
 
+.redes {
+  display: grid;
+
+  grid-template-columns: 4fr 4fr 4fr 4fr;
+  gap: 29px;
+  width: 218px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+}
+.iconImg {
+  width: 150%;
+}
+.pie {
+  margin-top: 10%;
+  color: azure;
+  background-color: #3d4850;
+  height: 10%;
+}
+
+a {
+  color: azure;
+  border-radius: 10%;
+}
+
+.portada {
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+}
+
+.responsive {
+  color: azure;
+}
+
 .col-lg-4 {
   border: solid lightseagreen;
   border-radius: 20px;
   background-color: #3d4850;
   opacity: 60%;
 }
-
 .cardBg {
   color: azure;
   margin-top: 10%;
@@ -352,101 +337,47 @@ body {
   margin: 1% !important;
   border-radius: 20px !important;
 }
-
 .cardImg {
   margin: 3% 0 4% 30%;
   border-radius: 100%;
   width: 140px;
   height: 140px;
 }
-
 .cardTitle {
   text-align: center;
   color: azure !important;
 }
-
 .cardText {
   text-align: center;
   margin: 4%;
   color: azure !important;
 }
-
 .cardButton {
   text-align: center;
   margin: 0 20% 5% 20%;
   background-color: #5e6f7b79 !important;
 }
 
-@media (min-width: 768px) {
-      .containerHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .imageHeader {
-        flex: 1;
-      }
-      
-      .textHeader {
-        flex: 2;
-      }
-      
-      .menu-nav {
-        display: flex;
-        justify-content: flex-end;
-      }
-      
-      .menu-nav ul {
-        display: flex;
-        gap: 20px;
-      }
-    }
-    
-    /* Estilos para pantallas pequeñas */
-    @media (max-width: 767px) {
-      .containerHeader {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .menu-nav {
-        margin-top: 20px;
-        text-align: center;
-      }
-      
-      .menu-nav ul {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-
 /* fin de estilo pagina index */
-
-
 
 /* inicio de pagina de carreras */
 .imagen-carrusel {
   width: 500px;
 }
-
 .carreras {
   margin: 2% 9%;
-}
 
 .titleCarrera {
   color: azure;
   text-align: center;
   font-size: 3rem;
 }
-
+}
 .subtitleCarrera {
   color: azure;
   text-align: center;
   font-size: 2rem;
 }
-
 .textCarrera {
   color: azure;
   margin-top: 1rem;
@@ -454,23 +385,20 @@ body {
   font-size: 1.3rem;
   text-align: justify;
 }
-
 .videoCarreras {
   margin: 10% 0 0 10%;
   height: 90%;
   width: 60%;
 }
-
 .imgCarrera {
-  width: 100% !important;
+  width: 100%;
 }
-
 .video-responsive {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-}
+
 
 .video-responsive iframe {
   position: absolute;
@@ -479,17 +407,15 @@ body {
   width: 100%;
   height: 100%;
 }
-
+}
 .wikis {
   text-decoration: none;
   color: teal;
   font-size: 1.5rem;
 }
-
 .divider {
   color: azure;
 }
-
 /* fin de inicio de carrera */
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* inicio de la pagina ingreso */
@@ -542,7 +468,6 @@ body {
   opacity: 80%;
   animation: bucle-opacity 5s infinite;
 }
-
 @keyframes bucle-opacity {
   0% {
     opacity: 1;
@@ -580,8 +505,8 @@ body {
   align-items: flex-start;
   padding: 10px;
   background: repeating-radial-gradient(black, transparent 100px);
-  width: 60%;
-  height: 90%;
+width: 60%;
+height: 90%;
 }
 
 
@@ -595,36 +520,41 @@ h3 {
 .content {
   margin: 0 5% 0 5%;
 }
-
-.dropSables {
+&.dropSables {
   text-align: center;
   margin: 3% 0 3% 0;
   font-size: 1.5rem;
   font-family: monospace;
-}
 
 .select {
   background-color: #5766709b;
 }
+}
+.grid-contenedor .grid-container-hijo2 {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: cadetblue;
+  margin-bottom: 37px;
+  grid-row-end: inherit;
+  align-content: center;
+  border-radius: 150px;
 
 .imgSable {
   width: 80%;
   height: 100%;
   max-height: 250px;
 }
-
+}
 .textConteiner {
   margin: 0% 10% 0 0;
 }
-
 .subTitleCard {
   margin-bottom: 2rem;
 }
-
 .textos {
   line-height: 40px;
 }
-
 .grid-contenedor .grid-container1 {
   margin: 0px;
   display: grid;
@@ -634,7 +564,6 @@ h3 {
   grid-row-end: inherit;
   align-content: center;
 }
-
 .botones :hover {
   background-color: teal;
   color: blue;
@@ -646,15 +575,7 @@ h3 {
   align-items: center;
 }
 
-.grid-contenedor .grid-container-hijo2 {
-  margin: 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: cadetblue;
-  margin-bottom: 37px;
-  grid-row-end: inherit;
-  align-content: center;
-}
+
 
 .grid-contenedor1 {
   border-radius: 150px;
@@ -679,18 +600,15 @@ h3 {
   align-content: center;
   align-items: center;
 }
-
 .textoverde {
   line-height: 30px;
 }
-
 .imgSableCristal {
   width: 80%;
   height: 100%;
   max-height: 250px;
   margin-left: 20%;
 }
-
 .grid-contenedor3 {
   width: 96%;
   margin: auto;
@@ -756,20 +674,16 @@ h3 {
   align-content: space-around;
   justify-items: center;
 }
-
 .selectCont {
   margin: 5% 15% 0 15%;
 }
-
 .titleCris {
   text-align: center;
   margin-bottom: 2rem;
 }
-
 .labelCris {
   margin: 0 3% 0 3%;
 }
-
 .selectCris {
   margin: 150px;
   width: 60%;
@@ -783,11 +697,11 @@ h3 {
   .col-md-5 {
     display: contents;
   }
-
   .videos-responsive {
     display: none;
-  }
+   
 
+  }
 
   .contenedor-ingreso {
     background-color: #3d4850;
@@ -806,7 +720,9 @@ h3 {
     height: auto;
     width: 50%;
     margin: auto;
+    background: repeating-radial-gradient(blue, transparent 100px);
     margin-top: 30px;
+
   }
 
   .videos {
@@ -835,21 +751,33 @@ h3 {
   .video4 {
     margin: auto;
     margin-bottom: 46px;
-
   }
-
   .cardImg {
     margin: 3% 0 4% 17%;
   }
-
   #redes {
     margin-left: auto;
-
   }
 
   /* media de la segunda pagina */
+  @media (max-width: 425px) {
+    .titulos4 {
+      border-radius: 35px;
+      border: solid;
+      height: 136px;
+      display: grid;
+      text-align: -webkit-center;
+      background-color: transparent;
+      color: azure;
+    }
+    .video4{display: none;}
+    .reproductor {
+      display: none;
+    }
 
-
+  .responsive {
+    background: repeating-radial-gradient(black, transparent 100px);
+  }
 
   .grid-contenedor {
     border-radius: 0%;
@@ -858,55 +786,36 @@ h3 {
 
   .grid-contenedor1 {
     border-radius: 0%;
-
+    background: repeating-radial-gradient(#178d85, black 196px);
   }
 
   .grid-container-hijo2 {
     border-radius: 0%;
-
+    background: repeating-radial-gradient(#178d85, black 196px);
   }
 
   .grid-contenedor2 {
     border-radius: 0%;
     display: flex;
-
+    background: repeating-radial-gradient(#178d85, black 196px);
   }
 
   .grid-contenedor3 {
-    display: block;
     border-radius: 0%;
-
-  }
-
-  .cristales {
-    display: grid;
-    grid-template-columns: 1fr
-  }
-
-  /* bibliografia 768px */
-  .redesBiblio {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 4fr;
-    gap: 29px;
-    width: 218px;
-    border-radius: 7px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    align-items: center;
-    margin: auto;
-    margin-top: 100%;
+    background: repeating-radial-gradient(#178d85, black 196px);
+    display: block;
   }
 
   .grid-contenedor4 {
     border-radius: 0%;
     display: flex;
-
+    background: repeating-radial-gradient(#178d85, black 196px);
   }
 
   .grid-contenedor5 {
     border-radius: 0%;
     display: flex;
-    ;
+    background: repeating-radial-gradient(#178d85, black 196px);
   }
 
   ul {
@@ -918,72 +827,125 @@ h3 {
     border: solid azure;
     margin-bottom: 10%;
   }
-
-  /* media de la bibliografia */
-
-
-
-  @media (max-width: 425px) {
-    .content-all {
-      margin-bottom: 179%;
-    }
-    
-    .cardImg {
-      margin: 3% 0 4% 30%;
-    }
-
-    .video4 {
-      width: 100%;
-      height: 50%;
-    }
-
-    .content-carrousel {
-      width: 37%;
-      position: absolute;
-      -webkit-animation: rotar 18s infinite linear;
-      animation: rotar 18s infinite linear;
-      transform-style: preserve-3d;
-      /* margin-left: 18%; */
-      padding: 81%;
-      display: grid;
-    }
-
-    .content-all {
-      width: 94px;
-      margin: 50px auto auto;
-      perspective: 800px;
-      position: relative;
-    }
-
-    .carrusel {
-      margin: 30% 85% 97% 0%;
-    }
-
-   
-    .reproductor {
-      display: none;
-    }
-
+}
+@media (max-width: 425px) {
+  .cardImg {
+    margin: 3% 0 4% 30%;
   }
-
-
-
-  .container {
+  .grid-contenedor-hijo3{
     display: block;
-    cursor: pointer;
   }
-
-  .selectCont {
+  .selectCont{
     display: none;
   }
-
-  .cristales {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .seccion4b {
+  .seccion4b{
     margin: inherit;
   }
+ 
+}
+// Variables
+$menu-toggle-size: 30px;
+$menu-toggle-color: #fff;
+$menu-toggle-span-size: 100%;
 
-  /* pagina de bibiliografia */}
+// Estilos del menú hamburguesa
+.menu-toggle {
+  display: none;
+
+  // Media query para dispositivos móviles
+  @media (max-width: 768px) {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: $menu-toggle-size;
+    height: $menu-toggle-size;
+    z-index: 1000;
+    cursor: pointer;
+    appearance: none;
+
+    & + .menu-toggle-label {
+      display: block;
+      position: relative;
+      width: $menu-toggle-size;
+      height: $menu-toggle-size;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $menu-toggle-span-size;
+        height: 2px;
+        background-color: $menu-toggle-color;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease-in-out;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          width: $menu-toggle-span-size;
+          height: 2px;
+          background-color: $menu-toggle-color;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:before {
+          top: -8px;
+        }
+
+        &:after {
+          top: 8px;
+        }
+      }
+    }
+
+    &:checked + .menu-toggle-label {
+      span {
+        background-color: transparent;
+
+        &:before {
+          transform: rotate(45deg) translate(0, -1px);
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+       // Mostrar el menú al hacer clic en el icono de hamburguesa
+    ~ .textHeader > ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      text-align: center;
+      z-index: 999;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      li {
+        display: block;
+        margin-bottom: 10px;
+
+        a {
+          color: $menu-toggle-color;
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            color: lighten($menu-toggle-color, 20%);
+          }
+        }
+      }
+    }
+
+    &:checked ~ .textHeader > ul {
+      display: block;
+    }
+  }
+}
+}
+}
